@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Pricing | Ahmed Zaher</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" href="100.jpg">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
+
+body{
+  min-height:100vh;
+  background:url("500.jpg") center/cover fixed no-repeat;
+  color:#fff;
+  padding-top:90px;
+}
+body::before{
+  content:"";
+  position:fixed;
+  inset:0;
+  background:rgba(5,8,13,.45);
+  z-index:-1;
+}
+
+.top-bar{
+  position:fixed;top:0;width:100%;
+  padding:15px 30px;
+  background:rgba(5,8,13,.9);
+  display:flex;
+  align-items:center;
+  gap:15px;
+  z-index:100;
+}
+.brand{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  color:#E6B450;
+  font-size:18px;
+  font-weight:600;
+}
+.brand img{width:50px}
+
+.nav-btn{
+  margin-left:auto;
+  display:flex;
+  gap:10px;
+}
+.nav-btn a{
+  color:#E6B450;
+  border:1px solid #E6B450;
+  padding:6px 14px;
+  border-radius:8px;
+  text-decoration:none;
+}
+
+.page{text-align:center;padding:40px 20px}
+.page h1{color:#E6B450;font-size:36px}
+.page p{opacity:.9;margin-bottom:40px}
+
+.pricing{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:25px;
+  max-width:1100px;
+  margin:auto;
+}
+.card{
+  background:rgba(5,8,13,.65);
+  border:1px solid rgba(230,180,80,.4);
+  border-radius:16px;
+  padding:30px 20px;
+  transition:.4s;
+  position:relative;
+}
+.card:hover{transform:translateY(-8px);}
+.card h2{color:#E6B450}
+.price{font-size:30px;margin:15px 0}
+.card p{opacity:.85;font-size:14px}
+.card ul{list-style:none;text-align:left}
+.card ul li{margin:8px 0}
+.card ul i{color:#E6B450;margin-right:6px}
+
+.card button{
+  display:inline-block;
+  margin-top:15px;
+  padding:12px 24px;
+  border-radius:10px;
+  border:1px solid #E6B450;
+  background:none;
+  color:#E6B450;
+  cursor:pointer;
+}
+
+.whatsapp{
+  position:fixed;
+  bottom:20px;right:20px;
+  width:60px;height:60px;
+  background:#25D366;
+  color:#fff;
+  border-radius:50%;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  font-size:30px;
+}
+
+/* ===== FORM MODAL ===== */
+.form-modal{
+  display:none;
+  position:fixed;
+  top:0;left:0;
+  width:100%;height:100%;
+  background:rgba(0,0,0,0.7);
+  justify-content:center;
+  align-items:center;
+  z-index:200;
+}
+.form-content{
+  background:rgba(5,8,13,.95);
+  padding:30px;
+  border-radius:12px;
+  width:90%;
+  max-width:400px;
+  text-align:left;
+  position:relative;
+}
+.form-content h3{color:#E6B450;margin-bottom:15px;}
+.form-content label{display:block;margin:10px 0 5px;}
+.form-content input, .form-content textarea{
+  width:100%;
+  padding:8px;
+  border-radius:6px;
+  border:1px solid #E6B450;
+  background:rgba(255,255,255,0.05);
+  color:#fff;
+}
+.form-content button{
+  margin-top:15px;
+  padding:10px 20px;
+  border:none;
+  background:#E6B450;
+  color:#05080D;
+  border-radius:8px;
+  cursor:pointer;
+}
+.close-btn{
+  position:absolute;
+  top:10px;right:15px;
+  font-size:20px;
+  cursor:pointer;
+  color:#fff;
+}
+</style>
+</head>
+
+<body>
+
+<header class="top-bar">
+  <div class="brand">
+    <img src="100.jpg">
+    <span>Ahmed Zaher</span>
+  </div>
+  <div class="nav-btn">
+    <a href="index-en.html">⬅ Home</a>
+    <a href="pricing.html">AR</a>
+    <a href="pricing-en.html">Eg</a>
+  </div>
+</header>
+
+<section class="page">
+  <h1>💰 Pricing Plans</h1>
+  <p>Choose the package that fits you</p>
+
+  <div class="pricing">
+
+    <div class="card">
+      <h2>Basic</h2>
+      <div class="price">1500 EGP</div>
+      <p>Perfect for small projects</p>
+      <ul>
+        <li><i class="fa fa-check"></i> One page</li>
+        <li><i class="fa fa-check"></i> Responsive design</li>
+        <li><i class="fa fa-check"></i> WhatsApp button</li>
+      </ul>
+      <button onclick="openForm('Basic')">Order Now</button>
+    </div>
+
+    <div class="card">
+      <h2>Pro</h2>
+      <div class="price">3000 EGP</div>
+      <p>Best for growing businesses</p>
+      <ul>
+        <li><i class="fa fa-check"></i> Up to 5 pages</li>
+        <li><i class="fa fa-check"></i> Animations</li>
+        <li><i class="fa fa-check"></i> Pricing page</li>
+      </ul>
+      <button onclick="openForm('Pro')">Order Now</button>
+    </div>
+
+    <div class="card">
+      <h2>Business</h2>
+      <div class="price">Custom</div>
+      <p>Large scale solutions</p>
+      <ul>
+        <li><i class="fa fa-check"></i> Full system</li>
+        <li><i class="fa fa-check"></i> Admin panel</li>
+        <li><i class="fa fa-check"></i> Extended support</li>
+      </ul>
+      <button onclick="openForm('Business')">Order Now</button>
+    </div>
+
+  </div>
+</section>
+
+<!-- FORM MODAL -->
+<div class="form-modal" id="formModal">
+  <div class="form-content">
+    <span class="close-btn" onclick="closeForm()">&times;</span>
+    <h3>Order Your Package</h3>
+    <form id="orderForm">
+      <label>Name</label>
+      <input type="text" id="name" required>
+      <label>Phone</label>
+      <input type="text" id="phone" required>
+      <label>Additional Notes</label>
+      <textarea id="notes"></textarea>
+      <input type="hidden" id="package">
+      <button type="submit">Send Order</button>
+    </form>
+  </div>
+</div>
+
+<a class="whatsapp" href="https://wa.me/201124864739" target="_blank">
+  <i class="fab fa-whatsapp"></i>
+</a>
+
+<script>
+function openForm(packageName){
+  document.getElementById('formModal').style.display='flex';
+  document.getElementById('package').value = packageName;
+}
+function closeForm(){
+  document.getElementById('formModal').style.display='none';
+}
+
+// ===== SEND TO WHATSAPP =====
+document.getElementById('orderForm').addEventListener('submit', function(e){
+  e.preventDefault();
+  const name = document.getElementById('name').value;
+  const phone = document.getElementById('phone').value;
+  const notes = document.getElementById('notes').value;
+  const packageName = document.getElementById('package').value;
+  
+  const message = `Package: ${packageName}%0AName: ${name}%0APhone: ${phone}%0ANotes: ${notes}`;
+  window.open(`https://wa.me/201124864739?text=${message}`, '_blank');
+  closeForm();
+});
+</script>
+
+</body>
+</html>

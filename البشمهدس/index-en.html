@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Engineer | Ahmed Zaher</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" href="100.jpg">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+<style>
+* {margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
+body {min-height:100vh;background:url("200.jpeg") center/cover no-repeat fixed;color:#fff;padding-top:90px;position:relative;}
+body::before {content:"";position:fixed;inset:0;background:rgba(5,8,13,0.5);z-index:0;}
+.top-bar {position:fixed;top:0;width:100%;padding:15px 40px;background:rgba(5,8,13,0.85);backdrop-filter:blur(6px);display:flex;justify-content:space-between;align-items:center;z-index:100;}
+.top-left {display:flex;align-items:center;gap:15px;}
+.brand img {width:55px;height:55px;object-fit:contain;filter:drop-shadow(0 0 6px rgba(230,180,80,.7));}
+.lang-buttons a {margin-left:8px;padding:5px 12px;border-radius:8px;border:1px solid #E6B450;color:#E6B450;text-decoration:none;font-weight:600;transition:0.3s;}
+.lang-buttons a:hover {background:#E6B450;color:#05080D;}
+.top-right a {padding:8px 16px;border-radius:8px;border:1px solid #E6B450;color:#E6B450;text-decoration:none;font-weight:600;transition:0.3s;}
+.top-right a:hover {background:#E6B450;color:#05080D;}
+.hero {min-height:100vh;display:flex;justify-content:center;align-items:center;padding-top:90px;flex-direction:column;position:relative;z-index:1;}
+.overlay {position:absolute;inset:0;background:rgba(5,8,13,0.6);}
+.content {position:relative;z-index:2;text-align:center;}
+.content h2 {font-size:30px;color:#E6B450;margin-bottom:20px;}
+.description {padding:40px 20px;max-width:800px;margin:20px auto;text-align:center;background:rgba(230, 180, 80, 0.05);color:#fff;border-radius:12px;}
+.description h3 {font-size:28px;color:#E6B450;margin-bottom:15px;text-shadow:1px 1px 5px rgba(0,0,0,0.5);}
+.description p {font-size:18px;line-height:1.6;}
+.social-icons {display:flex;gap:22px;justify-content:center;margin-bottom:20px;flex-wrap:wrap;}
+.icon {width:65px;height:65px;border-radius:50%;border:2px solid #E6B450;color:#E6B450;display:flex;align-items:center;justify-content:center;font-size:24px;box-shadow:0 0 15px rgba(230,180,80,0.5);cursor:pointer;transition:0.35s;}
+.icon:hover {background:#E6B450;color:#05080D;transform:scale(1.15) rotate(5deg);box-shadow:0 0 30px rgba(230,180,80,0.9);}
+.whatsapp-button {position:fixed;bottom:20px;right:20px;width:60px;height:60px;background:#25D366;color:#fff;border-radius:50%;display:flex;justify-content:center;align-items:center;font-size:30px;box-shadow:0 5px 15px rgba(0,0,0,0.3);cursor:pointer;transition:0.3s;}
+.whatsapp-button:hover {transform:scale(1.1);}
+@media (max-width:768px) {.top-bar {padding:10px 20px;} .brand span {font-size:18px;} .icon {width:50px;height:50px;font-size:20px;} .lang-buttons a {padding:4px 10px;} .top-right a {padding:6px 12px;}}
+@media (max-width:480px) {.brand span {font-size:16px;} .icon {width:45px;height:45px;font-size:18px;} .lang-buttons a {padding:3px 8px;} .top-right a {padding:5px 10px;}}
+</style>
+</head>
+<body>
+
+<header class="top-bar">
+  <div class="top-left">
+    <div class="brand">
+      <img src="100.jpg" alt="Logo">
+      <span>Engineer</span>
+    </div>
+    <div class="lang-buttons">
+      <a href="index.html">Arabic</a>
+      <a href="index-en.html">English</a>
+    </div>
+  </div>
+  <div class="top-right">
+    <a href="pricing-en.html">Pricing</a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="overlay"></div>
+  <div class="content">
+    <h2>Contact Us</h2>
+
+    <div class="social-icons">
+      <a href="#" class="icon"><i class="fab fa-facebook-f"></i></a>
+      <a href="#" class="icon"><i class="fab fa-instagram"></i></a>
+      <a href="#" class="icon"><i class="fab fa-tiktok"></i></a>
+      <a href="#" class="icon"><i class="fab fa-telegram-plane"></i></a>
+      <a href="#" class="icon"><i class="fas fa-laptop-code"></i></a>
+    </div>
+
+    <div class="description">
+      <h3>✨ Engineer Ahmed Zaher ✨</h3>
+      <p>
+        💻 Web & Mobile Developer<br>
+        🚀 Attractive websites, advanced apps, professional solutions<br>
+        🌟 My passion is turning digital ideas into reality
+      </p>
+    </div>
+  </div>
+</section>
+
+<a href="https://wa.me/201124864739" class="whatsapp-button" target="_blank">
+  <i class="fab fa-whatsapp"></i>
+</a>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+    const icons = document.querySelectorAll('.icon');
+    icons.forEach((icon, index) => {
+        setTimeout(() => icon.classList.add('show'), index * 300);
+    });
+});
+</script>
+
+</body>
+</html>
